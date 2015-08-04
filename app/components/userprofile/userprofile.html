@@ -1,0 +1,38 @@
+<h2>User Profile</h2>
+<div class="user-profile-info">
+	<div class="user-avatar">
+		<img src="{{profile.avatar_url}}">
+	</div>
+	<h2>{{profile.login}}</h2>
+	<h3>{{profile.name}} <span *ng-if="profile.company">@ {{profile.company}}</span></h3>
+	<h3>Location: {{profile.location}}</h3>
+	<h3>{{ profile.hireable ? 'Hireable' : 'Not Hireable'}}</h3>
+	<div *ng-if="profile.bio">{{profile.bio}}</div>
+	<div *ng-if="profile.updated_at">Last Updated: {{profile.updated_at}}</div>
+</div>
+<nav *ng-if="profile.login">
+	<ul>
+		<li *ng-if="profile.repos_url">
+			<a [router-link]="['/userrepositories', {username: profile.login}]">Public Repos</a>
+		</li>
+		<!--
+		Further routes to be implemented in the future.
+		
+		<li *ng-if="profile.gists_url">
+			<a>Public Gists</a>
+		</li>
+		<li *ng-if="profile.followers_url">
+			<a>{{profile.followers}} Follower(s)</a>
+		</li>
+		<li *ng-if="profile.following_url">
+			<a>Following {{profile.following}} User(s)</a>
+		</li>
+		<li *ng-if="profile.subscriptions_url">
+			<a>Subscriptions</a>
+		</li>
+		<li *ng-if="profile.organizations_url">
+			<a>Organizations</a>
+		</li>
+		-->
+	</ul>
+</nav>

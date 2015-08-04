@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.31",
+    "systemjs": "^0.18.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-traceur": "^0.17.1",
+    "gulp-typescript": "^2.6.0",
+    "gulp-uglify": "^1.0.1",
+    "traceur": "0.0.90"
+  }
+}

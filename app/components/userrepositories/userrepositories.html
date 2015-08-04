@@ -1,0 +1,7 @@
+<h1>{{username}}'s Public Repositories</h1>
+<ul *ng-if="repositories.length &gt; 0">
+	<li *ng-for="#repo of repositories">
+		<h2><a>{{repo.name}}</a></h2>
+		<div>{{repo.description}}</div>
+	</li>
+</ul>
